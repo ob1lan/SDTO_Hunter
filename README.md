@@ -35,12 +35,12 @@ python subdomain_finder.py example.com
 This will search for subdomains of example.com using the tools mentioned and save the results to separate log files. It will also check for potential subdomain takeover vulnerabilities.
 
 ## Logs
-<domain>_sublist3r.log
-<domain>_subfinder.log
-<domain>_amass_passive.log
-<domain>_amass_brute.log
-<domain>_amass_active.log
-<domain>_ffuf.log
+- <domain>_sublist3r.log
+- <domain>_subfinder.log
+- <domain>_amass_passive.log
+- <domain>_amass_brute.log
+- <domain>_amass_active.log
+- <domain>_ffuf.log
 
 ## Subdomain Takeover Check
 The script checks for indicators of potential subdomain takeover vulnerabilities using common error messages returned by various platforms.
