@@ -4,7 +4,7 @@ Subdomain Finder is a Python script to find subdomains of a given domain using v
 
 ## Features
 
-- Uses Sublist3r, Subfinder, Amass (passive, brute force, active), and ffuf for subdomain enumeration.
+- Uses Sublist3r, Subfinder and Amass (passive, brute force, active) for subdomain enumeration.
 - Logs results of each tool to separate files.
 - Checks for potential subdomain takeover vulnerabilities.
 - Saves discovered subdomains to a file.
@@ -15,7 +15,6 @@ Subdomain Finder is a Python script to find subdomains of a given domain using v
 - [Sublist3r](https://github.com/aboul3la/Sublist3r)
 - [Subfinder](https://github.com/projectdiscovery/subfinder)
 - [Amass](https://github.com/OWASP/Amass)
-- [ffuf](https://github.com/ffuf/ffuf)
 - `requests` Python library: `pip install requests`
 
 ## Installation
