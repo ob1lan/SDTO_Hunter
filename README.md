@@ -39,7 +39,6 @@ This will search for subdomains of example.com using the tools mentioned and sav
 - `<domain>`_amass_passive.log
 - `<domain>`_amass_brute.log
 - `<domain>`_amass_active.log
-- `<domain>`_ffuf.log
 
 ## Subdomain Takeover Check
 The script checks for indicators of potential subdomain takeover vulnerabilities using common error messages returned by various platforms.
