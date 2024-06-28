@@ -66,18 +66,6 @@ def find_subdomains(domain):
         write_to_log(f"{domain}_amass_active.log", result.stdout.splitlines())
     except Exception as e:
         print(f"Error occurred while enumerating subdomains for {domain} with Amass (Active): {e}")
-    
-    # Using ffuf with wordlist
-    try:
-        initial_count = len(subdomains)
-        result = subprocess.run(['ffuf', '-w', '/usr/share/wordlists/amass/subdomains-top1mil-5000.txt', '-u', f'http://FUZZ.{domain}', '-mc', '200,201,202,301,302,307,401,403,405,407'], capture_output=True, text=True)
-        parsed_result = parse_ffuf_output(result.stdout, domain)
-        subdomains.update(parsed_result)
-        new_count = len(subdomains) - initial_count
-        print(f"ffuf found {new_count} new subdomains for {domain}. Total so far: {len(subdomains)}")
-        write_to_log(f"{domain}_ffuf.log", result.stdout.splitlines())
-    except Exception as e:
-        print(f"Error occurred while enumerating subdomains for {domain} with ffuf: {e}")
 
     return list(subdomains)
 
