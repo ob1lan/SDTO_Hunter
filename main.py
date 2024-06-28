@@ -77,14 +77,6 @@ def parse_amass_output(output):
             subdomains.add(match.group(1))
     return subdomains
 
-def parse_ffuf_output(output, domain):
-    subdomains = set()
-    for line in output.splitlines():
-        if line.startswith("http://"):
-            subdomain = line.split(' ')[0].replace(f'http://', '').replace('/', '')
-            subdomains.add(subdomain)
-    return subdomains
-
 def write_to_log(filename, data):
     with open(filename, 'w') as file:
         for line in data:
